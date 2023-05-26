@@ -46,6 +46,19 @@ Switch to another branch name
 ### `git checkout`
 Create and switch to a new branch
 - Also has a ton of more features than git switch
+### `git merge`
+Merge two branches into one another
+- You merge to the head branch (branch you are currently in), 
+  1. Switch to the branch you want to merge to
+  2. Use `git merge <merging-branch>`
+- Fast Forward Merge: Moving branch head/pointer forward to the head/pointer of another branch
+- Merge Commit: Merging two branches that have different commits since branching
+  - Can result in conflicts
+- Resolving Conflicts:
+  - Open up the files(s) with merge confilcts
+  - Edit the files(s) to remove the conflicts. Decide which branch's content you want to keep in each conflict. Or keep the content from both. 
+  - Remove the conflict "markers" in the document
+  - Add your changes and then make a commit!   
 ## **Best Practices:**
 1. Atomic Commits: When possible, a commit should encompass a single feature, change, or fix.
 	- Keep each commit focused on a single thing
