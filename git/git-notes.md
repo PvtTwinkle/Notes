@@ -30,11 +30,22 @@ Options:
 - Using `git commit` on its own will use the configured default editor to write message
 - Using `git commit -m <message>` will specify the message in the command
 - Using `git commit --amend` will make changes to the previous commit
+- Using `git commit -a` will automatically add all modified files
 ### `git log`
 Retrieves history of commits for repository
 ### `git branch`
 View existing branches
 - Create a branch with ` git branch <branch-name>`
+- Delete a branch with `git branch -d <branch-name>`
+- Rename current branch with `git branch -m <new-branch-name>`
+### `git switch <branch-name>`
+Switch to another branch name
+- Create and switch to a new branch with `git switch -c 
+- Unstaged changes will be overwritten if there is conflict (modified file that exists in both branches)
+- Unstaged changes will come with you to new branch if there is no conflict (File doesn't exist in other branch)
+### `git checkout`
+Create and switch to a new branch
+- Also has a ton of more features than git switch
 ## **Best Practices:**
 1. Atomic Commits: When possible, a commit should encompass a single feature, change, or fix.
 	- Keep each commit focused on a single thing
