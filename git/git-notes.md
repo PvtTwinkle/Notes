@@ -46,6 +46,10 @@ Switch to another branch name
 ### `git checkout`
 Create and switch to a new branch
 - Also has a ton of more features than git switch
+- Use `git checkout <commit hash>` to "travel back in time" to a previous commit in a "Detached HEAD state" (changing HEAD to point to a commit, rather than the tip of a branch)
+  - Useful to examine the contents of the old commit or start a new branch from an old commit
+- Can also use `git checkout HEAD~x` to travel back "x" commits ago (Move HEAD to that referenced commit)
+- Use `git checkout HEAD <file.txt>` or `git checkout -- <file.txt>` to revert file back back to the state/version it was in at HEAD
 ### `git merge`
 Merge two branches into one another
 - You merge to the head branch (branch you are currently in), 
@@ -70,12 +74,25 @@ View changes between commits, branches, files, working directory, etc.
 Lets you save all uncommited changes you have made without using an official commit; useful for switching to another branch when you are not ready to commit
 - Use `git stash save` to take all uncommitted changes (staged and unstaged) and stash them, reverting the changes in your working copy
 - Use `git stash pop` to remove the most recently stashed changes in your stash and re-apply them to your working directory
+### `git restore`
+Useful for undoing operations similar to `git checkout HEAD <file.txt>`
+- Use `git restore <file.txt>` to revert file back to the state it was at in HEAD
+  - Use `git restore --source HEAD~x <file.txt>` to revert file back to the state it was at in the referenced "x" HEAD
+- Use `git restore --staged <file.txt>` to remove file from staging area
+### `git reset`
+Reset a repository back to a specific commit by moving the branch pointer backwards, eliminating commits
+- Using `git reset <commit-hash>` will reset the repo while keeping the changes in the working directory (erases commits but changes are still there)
+- Using `git reset --hard <commit-hash>` will reset the repo and also remove the changes in the working directory (erases commits and all changes)
+### `git revert`
+Resets a repository back to a specific commit by creating a new commit with the reversed changes (Safer than `git reset`)
+- Uses same syntax as `git reset`
 ## **Best Practices:**
 1. Atomic Commits: When possible, a commit should encompass a single feature, change, or fix.
 	- Keep each commit focused on a single thing
 	- Makes changes easy to track, review, and undo if needed
 2. Commit Messages (Present Tense) - Describe your changes in imperative mood
 	- "Make foo do something" NOT "Made foo do something"
+3. Use `git reset` only when you are not collaborating or sure that nobody else has your current branch/work shared. Instead, use `git revert`. 
 ## **Other:**
 ### Ignoring Files: 
 We can tell Git which files to ignore in a given repository, using a .gitignore file
