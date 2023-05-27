@@ -66,6 +66,10 @@ View changes between commits, branches, files, working directory, etc.
 - Use `git diff HEAD` to list all the changes in the working directory since your last commit (includes staged and unstaged)
 - Use `git diff <branch1>..<branch2>` to compare the changes between the tips of two branches
 - Use `git diff <commit1>..<commit2>` to compare the changes between two commits
+### `git stash`
+Lets you save all uncommited changes you have made without using an official commit; useful for switching to another branch when you are not ready to commit
+- Use `git stash save` to take all uncommitted changes (staged and unstaged) and stash them, reverting the changes in your working copy
+- Use `git stash pop` to remove the most recently stashed changes in your stash and re-apply them to your working directory
 ## **Best Practices:**
 1. Atomic Commits: When possible, a commit should encompass a single feature, change, or fix.
 	- Keep each commit focused on a single thing
