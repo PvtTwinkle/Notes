@@ -59,6 +59,13 @@ Merge two branches into one another
   - Edit the files(s) to remove the conflicts. Decide which branch's content you want to keep in each conflict. Or keep the content from both. 
   - Remove the conflict "markers" in the document
   - Add your changes and then make a commit!   
+### `git diff`
+View changes between commits, branches, files, working directory, etc. 
+- By default compares all changes in our working directory that are NOT staged to the last commit
+- Use `git diff --staged` to compare all changes in our working directy that ARE staged to the last commit
+- Use `git diff HEAD` to list all the changes in the working directory since your last commit (includes staged and unstaged)
+- Use `git diff <branch1>..<branch2>` to compare the changes between the tips of two branches
+- Use `git diff <commit1>..<commit2>` to compare the changes between two commits
 ## **Best Practices:**
 1. Atomic Commits: When possible, a commit should encompass a single feature, change, or fix.
 	- Keep each commit focused on a single thing
