@@ -86,6 +86,9 @@ Reset a repository back to a specific commit by moving the branch pointer backwa
 ### `git revert`
 Resets a repository back to a specific commit by creating a new commit with the reversed changes (Safer than `git reset`)
 - Uses same syntax as `git reset`
+### `git clone`
+Get a local copy of an existing repository using a URL.
+- Git initializes a new repository on your machine, giving you the full git history of the repository
 ## **Best Practices:**
 1. Atomic Commits: When possible, a commit should encompass a single feature, change, or fix.
 	- Keep each commit focused on a single thing
@@ -100,4 +103,4 @@ We can tell Git which files to ignore in a given repository, using a .gitignore 
   - `.filename`  ignores file names
   - `/directory` ignores everything in directory
   - `*.txt` ignores all files with this file type
-- [gitignore.io](https://gitignore.io) can help you get started on creating a .gitignore file	
+- [gitignore.io](https://gitignore.io) can help you get started on creating a .gitignore file
