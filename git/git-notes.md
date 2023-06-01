@@ -94,6 +94,8 @@ Used to setup connections from your local repository to a remote repository
 - View any existing remotes for your repository with `git remote -v`
 - Add a new remote with `git remote add <name> <url>`
   - Remotes are most commonly called "origin"
+- Rename a remote with `git remote rename <old> <new>`
+- Remove a remote with `git remote remove <name>`
 ## **Best Practices:**
 1. Atomic Commits: When possible, a commit should encompass a single feature, change, or fix.
 	- Keep each commit focused on a single thing
