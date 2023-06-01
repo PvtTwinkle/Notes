@@ -96,6 +96,12 @@ Used to setup connections from your local repository to a remote repository
   - Remotes are most commonly called "origin"
 - Rename a remote with `git remote rename <old> <new>`
 - Remove a remote with `git remote remove <name>`
+### `git push`
+Used to push your current working directory repository to a remote repository
+- Basic usage: `git push <remote> <branch>`
+- You can push different/multiple branches
+- You can push a different named branch with `git push <remote> <local-branch>:<remote-branch>`
+- Use the "-u" switch to set "upstream" of the local branch so you only have to run "git push" in the future
 ## **Best Practices:**
 1. Atomic Commits: When possible, a commit should encompass a single feature, change, or fix.
 	- Keep each commit focused on a single thing
