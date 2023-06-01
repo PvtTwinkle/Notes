@@ -89,6 +89,11 @@ Resets a repository back to a specific commit by creating a new commit with the 
 ### `git clone`
 Get a local copy of an existing repository using a URL.
 - Git initializes a new repository on your machine, giving you the full git history of the repository
+### `git remote`
+Used to setup connections from your local repository to a remote repository
+- View any existing remotes for your repository with `git remote -v`
+- Add a new remote with `git remote add <name> <url>`
+  - Remotes are most commonly called "origin"
 ## **Best Practices:**
 1. Atomic Commits: When possible, a commit should encompass a single feature, change, or fix.
 	- Keep each commit focused on a single thing
