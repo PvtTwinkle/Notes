@@ -102,6 +102,14 @@ Used to push your current working directory repository to a remote repository
 - You can push different/multiple branches
 - You can push a different named branch with `git push <remote> <local-branch>:<remote-branch>`
 - Use the "-u" switch to set "upstream" of the local branch so you only have to run "git push" in the future
+### `git fetch`
+Take the changes from the remote repository, BUT those changes will not be automatically integrated into our working files. "Get the latest info but don't screw up my working directory."
+- Usage: `git fetch <remote> <branch>` (Defaults is origin)
+- Basically downloads "origin/main" but your local "main" remains unchanged
+### `git pull`
+Retrieve changes from a remote repository, unlike fetch, pull actuall updates the HEAD branch with the new changes. "Download data from Github AND immediately update my local repo with those changes."
+- git pull = git fetch + git merge
+- Usage: `git pull <remote> <branch>`
 ## **Best Practices:**
 1. Atomic Commits: When possible, a commit should encompass a single feature, change, or fix.
 	- Keep each commit focused on a single thing
